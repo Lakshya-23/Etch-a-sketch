@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch V2</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="heading"><h1>Etch-a-Sketch</h1></div>
+    <div class="main">  
+        <div class="leftbox">
+            <div id="ccontainer">
+                <div class="cborder"><input type="color" oninput="colorchange(document.getElementById('cpicker').value)" id="cpicker"></div>
+                <div class="chead text">Color</div>
+            </div>
+            <button class="eraser text" onclick="colorchange('rgb(238, 233, 233)')">Eraser</button>
+            <button class="rainbow text" onclick="colorchange('random')">Rainbow</button>
+            <button class="clear text">Clear</button>
+            <div class="slider"><input class="inslider" type="range" min="16" max="64" value="16" oninput="rangeValue.innerText=this.value,changesize(this.value),rangeValue1.innerText=this.value"><div class="gridsize"><span id="rangeValue">16</span><span> x </span><span id="rangeValue1">16</span></div></div>
+        </div>
+        <div id="rightbox"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
